@@ -1,0 +1,25 @@
+{
+  "name": "app-form",
+  "version": "1.0.0",
+  "description": "An application form using react and node JS",
+  "main": "app.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run client\" \"npm run server\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "Me-ann Urgel",
+  "license": "ISC",
+  "dependencies": {
+    "@material-ui/icons": "^4.2.1",
+    "axios": "^0.19.0",
+    "concurrently": "^4.1.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.0.0"
+  }
+}
