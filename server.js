@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
-// require("dotenv").config();
+require("dotenv").config();
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
@@ -9,7 +9,10 @@ app.use(express.json());
 
 const Form = require("./model/Form");
 
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true }, () => {
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true }, err => {
+  if (err) {
+    console.log(err);
+  }
   console.log("Mongodb connected");
 });
 
