@@ -10,7 +10,7 @@ app.use(express.json());
 const Form = require("./model/Form");
 
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true }, () => {
-  console.log("Connected with mongoDB");
+  console.log("Mongodb connected");
 });
 
 app.post("/", (req, res) => {
