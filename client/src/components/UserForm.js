@@ -139,7 +139,7 @@ class UserForm extends Component {
           </div>
         );
       default:
-        return <h1>Copyright Me-ann 2019 </h1>;
+        return <h1 style={{ textAlign: "center", marginTop: "100px" }}>Copyright Me-ann 2019 </h1>;
     }
   }
 }
