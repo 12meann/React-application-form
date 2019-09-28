@@ -16,7 +16,10 @@ const styles = theme => ({
   },
   form: {
     margin: "auto",
-    marginTop: "100px"
+    marginTop: "100px",
+    [theme.breakpoints.down("sm")]: {
+      margin: "100px 20px 20px 20px"
+    }
   },
   button: {
     margin: 10,

@@ -24,7 +24,10 @@ const styles = theme => ({
   },
   list: {
     margin: "auto",
-    marginTop: 100
+    marginTop: 100,
+    [theme.breakpoints.down("sm")]: {
+      margin: "100px 20px"
+    }
   }
 });
 class ConfirmForm extends Component {

@@ -19,6 +19,9 @@ const styles = theme => ({
     marginTop: "20px",
     "& input": {
       padding: "10px"
+    },
+    [theme.breakpoints.down("sm")]: {
+      margin: "0 20px"
     }
   },
   button: {

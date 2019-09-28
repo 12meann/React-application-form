@@ -15,10 +15,13 @@ const styles = theme => ({
     margin: "auto"
   },
   form: {
-    margin: "auto",
+    margin: "0 auto",
     marginTop: "100px",
     "& input": {
       padding: "10px"
+    },
+    [theme.breakpoints.down("sm")]: {
+      margin: "100px 20px"
     }
   },
   button: {
@@ -44,9 +47,9 @@ class PersonalField extends Component {
           </Toolbar>
         </AppBar>
 
-        <Grid>
+        <Grid container>
           <Grid item xs={12} className={classes.form} sm={6}>
-            <form action="">
+            <form>
               <TextField
                 name="firstName"
                 type="text"
